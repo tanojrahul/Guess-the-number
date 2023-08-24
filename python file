@@ -1,7 +1,7 @@
 import random
-
+limit=10
 def to_play():
-    computer_guess = random.randrange(0, 11)
+    computer_guess = random.randrange(0, limit)
     while True:
         num=int(input("Guess a number between 1-10 : "))
         if num<computer_guess:
