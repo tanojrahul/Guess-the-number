@@ -1,0 +1,24 @@
+import random
+
+def to_play():
+    computer_guess = random.randrange(0, 11)
+    while True:
+        num=int(input("Guess a number between 1-10 : "))
+        if num<computer_guess:
+            print("Your guess is too low")
+        if num>computer_guess:
+            print("Your guess is too high")
+        if num==computer_guess:
+            print("You have guessed it correct")
+            break
+
+
+def main():
+    to_play()
+    do=input("press _q_ to quit,or press enter to play again: ")
+    if do=="":
+        to_play()
+    if do=='q':
+        print("Thank you visit again!!")
+
+main()
